@@ -13,7 +13,6 @@ namespace AnimalHospital
         static void Main(string[] args)
         {
 
-
              List<Animal> Animals = new List<Animal>
             {
                 new Animal { Name = "Catname1", Species = "Ragdoll", Age = 2,vaccinated = true, TotalLegs= 4},
@@ -26,29 +25,28 @@ namespace AnimalHospital
                 new Animal { Name = "DogName2", Species = "GoldenRetriever", Age = 8,vaccinated = true, TotalLegs= 4},
                 new Animal { Name = "DogName3", Species = "GoldenRetriever", Age = 8,vaccinated = true, TotalLegs= 4},
                 new Animal { Name = "BirdName2", Species = "piegon", Age = 1,vaccinated = false, TotalLegs= 2},
-                //new Animal { Name = "Shadow", Species = "piegon", Age = 2,vaccinated = false, TotalLegs= 2},
+                new Animal { Name = "Shadow", Species = "piegon", Age = 2,vaccinated = false, TotalLegs= 2},
             };
 
-            //a. Int
+            //a. (int) How many dogs?
             TotalDogs(Animals);
 
 
-            //b. Animal
+            //b. (Animal )Which animal is the oldest?
             OldestAnimal(Animals);
 
 
-            //c. List
+            //c.  (List) Display vaccinated animals
             CheckVaccinatedAnimals(Animals);
 
-            //d list
+            //d (List) Animals with 4 legs and over 3 years old
             CheckAnimalsWithMorethan4Legs(Animals);
 
+            //e. (bool) Check if there's a animal with name 'Shadow'
             CheckSpecificAnimal(Animals);
 
             Console.ReadLine();
-
         }
-
         public static void TotalDogs(List<Animal> Animals)
         {
             int totalDogs = Animals.Count(x => x.Species == "GoldenRetriever");
@@ -85,8 +83,9 @@ namespace AnimalHospital
         {
 
             string search = "Shadow";
-            Console.WriteLine("Does a animal with name " + search + "exists?");
-            for(int i = 0; i<10; i++)
+            Console.WriteLine("Does a animal with name " + search + " exists?");
+
+            for(int i = 0; i<10; i++) 
             {
                 Console.Write("\rChecking   "); 
                 Thread.Sleep(100); 
